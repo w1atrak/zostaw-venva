@@ -2,7 +2,7 @@
     "name": "zostaw-venva",
     "displayName": "Zostaw Venva",
     "description": "Extension to stop you from editing those venv files",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "engines": {
         "vscode": "^1.105.0"
     },
@@ -29,6 +29,11 @@
           }
         }
       }
+    },
+    "publisher": "w1atrak",
+    "repository": {
+        "url": "https://github.com/w1atrak/zostaw-venva",
+        "type": "git"
     },
     "scripts": {
         "vscode:prepublish": "npm run package",
