@@ -2,7 +2,7 @@
     "name": "zostaw-venva",
     "displayName": "Zostaw Venva",
     "description": "Extension to stop you from editing those venv files",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "engines": {
         "vscode": "^1.105.0"
     },
@@ -14,21 +14,23 @@
     ],
     "main": "./dist/extension.js",
     "contributes": {
-      "configuration": {
-        "title": "Zostaw Venva settings",
-        "properties": {
-          "zostaw-venva.warningMessage": {
-            "type": "string",
-            "default": "venv file edited 💀",
-            "description": "Message to be displayed in a warning message"
-          },
-          "zostaw-venva.venvPaths": {
-            "type": "array",
-            "default": ["venv"],
-            "description": "An array of path substrings to match in edited file"
-          }
+        "configuration": {
+            "title": "Zostaw Venva settings",
+            "properties": {
+                "zostaw-venva.warningMessage": {
+                    "type": "string",
+                    "default": "venv file edited 💀",
+                    "description": "Message to be displayed in a warning message"
+                },
+                "zostaw-venva.venvPaths": {
+                    "type": "array",
+                    "default": [
+                        "venv"
+                    ],
+                    "description": "An array of path substrings to match in edited file"
+                }
+            }
         }
-      }
     },
     "publisher": "w1atrak",
     "repository": {
