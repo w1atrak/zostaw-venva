@@ -2,7 +2,13 @@
 
 All notable changes to the "zostaw-venva" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## [1.0.0] - 2025-11-20
+
+### Added 
+
+- Explanation of the extension's configuration properties in the README.md file.
+
+- LICENSE file.
 
 ## [Unreleased]
 
