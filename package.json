@@ -2,7 +2,7 @@
     "name": "zostaw-venva",
     "displayName": "Zostaw Venva",
     "description": "Extension to stop you from editing those venv files",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "engines": {
         "vscode": "^1.105.0"
     },
