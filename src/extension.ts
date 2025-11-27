@@ -1,6 +1,5 @@
 import * as vscode from "vscode";
 
-let debounceTimer: NodeJS.Timeout | undefined;
 let substrings: string[];
 let warningMessage: string;
 
@@ -18,22 +17,13 @@ export function activate(context: vscode.ExtensionContext) {
 
     context.subscriptions.push(
         vscode.workspace.onDidChangeTextDocument(event => {
+            const fileName: string = event.document.fileName;
             if (
                 event.document === vscode.window.activeTextEditor?.document &&
-                event.contentChanges.length > 0
+                event.contentChanges.length > 0 &&
+                substrings.some(s => fileName.includes(s))
             ) {
-                if (debounceTimer) {
-                    clearTimeout(debounceTimer);
-                }
-
-                debounceTimer = setTimeout(() => {
-                    const fileName: string =
-                        event.document.fileName.toLowerCase();
-
-                    if (substrings.some(s => fileName.includes(s))) {
-                        vscode.window.showWarningMessage(warningMessage);
-                    }
-                }, 1000);
+                vscode.window.showWarningMessage(warningMessage);
             }
         })
     );
@@ -45,10 +35,4 @@ export function activate(context: vscode.ExtensionContext) {
             }
         })
     );
-}
-
-export function deactivate() {
-    if (debounceTimer) {
-        clearTimeout(debounceTimer);
-    }
 }
