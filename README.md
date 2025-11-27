@@ -1,4 +1,4 @@
-# Zostaw Venva (WORK IN PROGRESS)
+# Zostaw Venva
 
 A small VS Code extension that warns you when you edit files inside a virtual environment or any folder you choose to match by path.
 
