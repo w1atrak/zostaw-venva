@@ -40,10 +40,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     context.subscriptions.push(
         vscode.workspace.onDidChangeConfiguration(event => {
-            if (
-                event.affectsConfiguration("zostaw-venva.venvPaths") ||
-                event.affectsConfiguration("zostaw-venva.warningMessage")
-            ) {
+            if (event.affectsConfiguration("zostaw-venva")) {
                 loadConfig();
             }
         })
